@@ -3,6 +3,7 @@
 #include "ForwardDeclarations.h"
 #include "ControlerType.h"
 #include "HCIState.h"
+#include "ControlerState.h"
 
 using namespace System;
 
@@ -22,6 +23,9 @@ namespace JoyConNative {
 
 		void SetHCIState(HCIState state);
 
+		property ControlerState State {
+			ControlerState get();
+		}
 
 	internal:
 		Controler(HANDLE handle, String^ devicePath, ControlerType type, Manager^ parant);

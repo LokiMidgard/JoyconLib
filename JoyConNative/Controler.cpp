@@ -18,6 +18,11 @@ void JoyConNative::Controler::SetHCIState(HCIState state)
 	controlerState->SetHCIState(state);
 }
 
+ControlerState Controler::State::get() {
+	ControlerState result;
+	return result;
+}
+
 Controler::Controler(HANDLE handle, String^ devicePath, ControlerType type, Manager^ parant)
 {
 	this->deviceHandle = handle;
@@ -29,10 +34,10 @@ Controler::Controler(HANDLE handle, String^ devicePath, ControlerType type, Mana
 	this->controlerState = gcnew SimpleHIDState(this);
 }
 
-
-
 void JoyConNative::Controler::ExecuteSubCommand(byte command, byte data[], size_t dataLength, byte(&rumble)[8])
 {
+	if (isDisposed)
+		return;
 	byte buffer[49];
 	memset(buffer, 0, sizeof(buffer));
 	buffer[0] = 0x01;

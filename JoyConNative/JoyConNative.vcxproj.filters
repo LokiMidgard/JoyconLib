@@ -42,6 +42,9 @@
     <ClInclude Include="SimpleHIDState.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="ControlerState.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -60,6 +63,9 @@
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="SimpleHIDState.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlerState.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

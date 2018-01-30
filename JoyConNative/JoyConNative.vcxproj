@@ -130,11 +130,15 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\netstandard2.0\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseControlerState.h" />
     <ClInclude Include="Controler.h" />
+    <ClInclude Include="ControlerState.h" />
     <ClInclude Include="ControlerType.h" />
     <ClInclude Include="ForwardDeclarations.h" />
     <ClInclude Include="HCIState.h" />
@@ -147,6 +151,7 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="BaseControlerState.cpp" />
     <ClCompile Include="Controler.cpp" />
+    <ClCompile Include="ControlerState.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="SimpleHIDState.cpp" />
     <ClCompile Include="Stdafx.cpp">
